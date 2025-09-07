@@ -1,7 +1,6 @@
 function createGrid() {
   let size = prompt("Enter a size up to 100 as a digit", 16);
   size = Number(size);
-  console.log(size);
   if (size > 100 || isNaN(size)) {
     alert("Please enter a number less than 100.");
     return;
@@ -22,10 +21,12 @@ function createGrid() {
     container.appendChild(column);
   }
 
-  container.addEventListener(
-    "mouseover",
-    (e) => (e.target.style.backgroundColor = "black")
-  );
+  container.addEventListener("mouseover", (e) => {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  });
 }
 
 const button = document.querySelector("button");
