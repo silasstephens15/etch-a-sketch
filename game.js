@@ -1,13 +1,22 @@
-const size = 16;
-let container = document.querySelector(".container");
+function createGrid() {
+  const size = 16;
+  const container = document.querySelector(".container");
 
-for (let i = 0; i < size; i++) {
-  let column = document.createElement("div");
-  column.classList.add("column");
   for (let i = 0; i < size; i++) {
-    let square = document.createElement("div");
-    square.classList.add("square");
-    column.appendChild(square);
+    let column = document.createElement("div");
+    column.classList.add("column");
+    for (let i = 0; i < size; i++) {
+      let square = document.createElement("div");
+      square.classList.add("square");
+      column.appendChild(square);
+    }
+    container.appendChild(column);
   }
-  container.appendChild(column);
+
+  container.addEventListener(
+    "mouseover",
+    (e) => (e.target.style.backgroundColor = "black")
+  );
 }
+
+createGrid();
