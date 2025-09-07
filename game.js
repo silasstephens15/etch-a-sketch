@@ -26,6 +26,9 @@ function createGrid() {
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
     e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    if (Number(e.target.style.opacity) < 1) {
+      e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
+    }
   });
 }
 
