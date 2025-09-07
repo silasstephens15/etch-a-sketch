@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.square {
+  flex-grow: 1;
+  border: 1px solid black;
+}

@@ -5,7 +5,9 @@ for (let i = 0; i < size; i++) {
   let column = document.createElement("div");
   column.classList.add("column");
   for (let i = 0; i < size; i++) {
-    column.appendChild(document.createElement("div"));
+    let square = document.createElement("div");
+    square.classList.add("square");
+    column.appendChild(square);
   }
   container.appendChild(column);
 }
